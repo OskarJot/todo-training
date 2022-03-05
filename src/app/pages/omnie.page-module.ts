@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 import { OmniePage } from './omnie.page';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
 
 @NgModule({
   imports: [
@@ -23,7 +25,5 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 })
 export class OmniePageModule {}
 export class AppModule{}
-
-import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 

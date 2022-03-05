@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,9 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    BsDropdownModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]
