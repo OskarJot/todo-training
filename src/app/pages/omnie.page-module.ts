@@ -9,6 +9,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
   imports: [
     BsDropdownModule.forRoot(),
     CommonModule,
+    CarouselModule.forRoot(),
     RouterModule.forChild([
       {
         path: '',
@@ -21,3 +22,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
   exports: [],
 })
 export class OmniePageModule {}
+export class AppModule{}
+
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
+
