@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col" style="max-width: 100px; background-color: yellow;">
+    <div class="col" style="max-width: 100px; background-color: yellow">
       <ul class="nav flex-column">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Start</a>
@@ -14,10 +14,53 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="kontakt">Kontakt</a>
         </li>
-      </ul>    </div>
+      </ul>
+    </div>
     <div class="col">
       <h1>Zapraszam do siebie</h1>
+      <div class="btn-group" dropdown>
+        <button
+          id="button-animated"
+          dropdownToggle
+          type="button"
+          class="btn btn-primary dropdown-toggle"
+          aria-controls="dropdown-animated"
+        >
+          Button dropdown <span class="caret"></span>
+        </button>
+        <ul
+          id="dropdown-animated"
+          *dropdownMenu
+          class="dropdown-menu"
+          role="menu"
+          aria-labelledby="button-animated"
+        >
+          <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+          <li role="menuitem">
+            <a class="dropdown-item" href="#">Another action</a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item" href="#">Something else here</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
       <router-outlet></router-outlet>
     </div>
+  </div>
 </div>
-
