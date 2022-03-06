@@ -5,6 +5,7 @@ import { OmniePage } from './omnie.page';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { EmployeeDetailsPage } from './employee-details.page';
 
 
 @NgModule({
@@ -17,6 +18,10 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
         path: '',
         component: OmniePage,
       },
+      {
+        path: 'Omnie/:name',
+        component: EmployeeDetailsPage,
+      }
     ]),
   ],
   declarations: [OmniePage],

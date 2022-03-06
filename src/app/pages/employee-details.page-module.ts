@@ -14,4 +14,5 @@ import { EmployeeDetailsPage } from './employee-details.page';
   	providers: [],
   	exports: [] })
 export class EmployeeDetailsPageModule {
+
 }
