@@ -1,6 +1,9 @@
 <div class="container">
   <div class="row">
-    <div class="col" style="max-width: 150px; background-color: rgba(58, 164, 226, 0.329)">
+    <div
+      class="col"
+      style="max-width: 150px; background-color: rgba(58, 164, 226, 0.329)"
+    >
       <ul class="nav flex-column">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Start</a>
@@ -17,32 +20,51 @@
       </ul>
     </div>
     <div class="col">
-      <h1>Zapraszam do siebie</h1>
-      <div class="btn-group" dropdown>
-        <button
-          id="button-animated"
-          dropdownToggle
-          type="button"
-          class="btn btn-primary dropdown-toggle"
-          aria-controls="dropdown-animated"
-        >
-          Button dropdown <span class="caret"></span>
-        </button>
-        <ul
-          id="dropdown-animated"
-          *dropdownMenu
-          class="dropdown-menu"
-          role="menu"
-          aria-labelledby="button-animated"
-        >
-          <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-          <li role="menuitem">
-            <a class="dropdown-item" href="#">Another action</a>
-          </li>
-          <li role="menuitem">
-            <a class="dropdown-item" href="#">Something else here</a>
-          </li>
-        </ul>
+      <img
+        src="https://us.123rf.com/450wm/karpenkoilia/karpenkoilia1612/karpenkoilia161200052/69053698-line-logo-triathlon-figuren-triathleten-auf-wei%C3%9Fem-hintergrund-schwimmen-radfahren-und-laufen-symbol.jpg?ver=6"
+        class="img-fluid"
+        style="display: block; margin-left: auto; margin-right: auto"
+        alt="..."
+      />
+      <h1 style="text-align: center">Zapraszam do siebie</h1>
+
+      <div style="text-align: center">
+        <div class="btn-group" dropdown style="margin-left: auto; margin-right: auto;">
+          <button
+            id="button-animated"
+            dropdownToggle
+            type="button"
+            class="btn btn-primary dropdown-toggle"
+            aria-controls="dropdown-animated"
+            style="text-align: center"
+          >
+            Co u mnie znajdziesz <span class="caret"></span>
+          </button>
+          <ul
+            id="dropdown-animated"
+            *dropdownMenu
+            class="dropdown-menu"
+            style="text-align: center"
+            role="menu"
+            aria-labelledby="button-animated"
+          >
+            <li role="menuitem">
+              <a class="dropdown-item" style="list-style-type: none" href="#"
+                >Info o mnie</a
+              >
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item" style="list-style-type: none" href="#"
+                >Nasza ekipa</a
+              >
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item" style="list-style-type: none" href="#"
+                >Kontakt do nas</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
       <router-outlet></router-outlet>
     </div>
