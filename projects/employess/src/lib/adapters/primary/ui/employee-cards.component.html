@@ -1,6 +1,6 @@
 <div>
     <ul>
-        <li *ngFor="let employee of dane$ | async">
+        <li *ngFor="let employee of dane$ | async" (click)="onEmployeeClicked(employee)">
             {{employee.name}}
             <img [src]="employee.imageUrl" style="height: 300px;">
         </li>

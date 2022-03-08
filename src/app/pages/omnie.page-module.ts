@@ -8,6 +8,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { EmployeeDetailsPage } from './employee-details.page';
 import { EmployeeCardsComponent } from 'projects/employess/src/lib/adapters/primary/ui/employee-cards.component';
 import { EmployeeCardsComponentModule } from 'projects/employess/src/lib/adapters/primary/ui/employee-cards.component-module';
+import { EmployeeFormComponentModule } from 'projects/employess/src/lib/adapters/primary/ui/employee-form.component-module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { EmployeeCardsComponentModule } from 'projects/employess/src/lib/adapter
     BsDropdownModule.forRoot(),
     CommonModule,
     EmployeeCardsComponentModule,
+    EmployeeFormComponentModule,
     CarouselModule.forRoot(),
     RouterModule.forChild([
       {

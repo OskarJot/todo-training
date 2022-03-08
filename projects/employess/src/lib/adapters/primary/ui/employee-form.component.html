@@ -1,0 +1,7 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onFormSubmited(employeeForm)">
+  <input type="text" formControlName="name" placeholder="Name" /><input
+    type="text"
+    formControlName="image"
+    placeholder="Image"
+  /><input type="submit" value="Submit" />
+</form>
