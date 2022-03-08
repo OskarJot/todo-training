@@ -124,6 +124,46 @@
           }
         }
       }
+    },
+    "employess": {
+      "projectType": "library",
+      "root": "projects/employess",
+      "sourceRoot": "projects/employess/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/employess/tsconfig.lib.json",
+            "project": "projects/employess/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/employess/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/employess/src/test.ts",
+            "tsConfig": "projects/employess/tsconfig.spec.json",
+            "karmaConfig": "projects/employess/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/employess/tsconfig.lib.json",
+              "projects/employess/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "todo-training"

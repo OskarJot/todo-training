@@ -16,8 +16,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule.forRoot(),
-    BsDropdownModule.forRoot()
-
+    BsDropdownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
