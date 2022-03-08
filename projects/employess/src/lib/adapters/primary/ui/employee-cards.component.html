@@ -1,0 +1,8 @@
+<div>
+    <ul>
+        <li *ngFor="let employee of dane$ | async">
+            {{employee.name}}
+            <img [src]="employee.imageUrl" style="height: 300px;">
+        </li>
+    </ul>
+</div>
