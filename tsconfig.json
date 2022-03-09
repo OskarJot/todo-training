@@ -9,6 +9,10 @@
       "employess": [
         "dist/employess/employess",
         "dist/employess"
+      ],
+      "team": [
+        "dist/team/team",
+        "dist/team"
       ]
     },
     "declaration": false,
@@ -24,6 +28,6 @@
     ]
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false
+    "enableI18nLegacyMessageIdFormat": true
   }
 }

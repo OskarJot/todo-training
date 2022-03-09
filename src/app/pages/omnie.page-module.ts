@@ -6,10 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { EmployeeDetailsPage } from './employee-details.page';
-import { EmployeeCardsComponent } from 'projects/employess/src/lib/adapters/primary/ui/employee-cards.component';
 import { EmployeeCardsComponentModule } from 'projects/employess/src/lib/adapters/primary/ui/employee-cards.component-module';
 import { EmployeeFormComponentModule } from 'projects/employess/src/lib/adapters/primary/ui/employee-form.component-module';
-
+import { OurTeamComponentModule } from 'projects/team/src/lib/adapters/primary/ui/our-team.component-module'
 
 @NgModule({
   imports: [
@@ -17,6 +16,7 @@ import { EmployeeFormComponentModule } from 'projects/employess/src/lib/adapters
     CommonModule,
     EmployeeCardsComponentModule,
     EmployeeFormComponentModule,
+    OurTeamComponentModule,
     CarouselModule.forRoot(),
     RouterModule.forChild([
       {
