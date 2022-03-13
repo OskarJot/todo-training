@@ -5,9 +5,9 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'lib-kontakt-page',
-  templateUrl: './kontakt.page.html',
+  selector: 'lib-team-detail',
+  templateUrl: './team-detail.component.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class KontaktPage {}
+export class TeamDetailComponent {}

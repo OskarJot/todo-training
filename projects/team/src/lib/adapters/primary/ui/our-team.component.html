@@ -1,1 +1,11 @@
-<h1>Our-team component</h1>
+<div>
+  <ul>
+    <li
+      *ngFor="let employee of dane$ | async"
+      (click)="onEmployeeClicked(employee)"
+    >
+      <a [routerLink]="['/team-detail', employee.name]">{{employee.name}}</a>
+      <img [src]="employee.imageUrl" style="height: 300px" />
+    </li>
+  </ul>
+</div>
