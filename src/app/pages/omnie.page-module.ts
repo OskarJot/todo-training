@@ -8,7 +8,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { EmployeeDetailsPage } from './employee-details.page';
 import { EmployeeCardsComponentModule } from 'projects/employess/src/lib/adapters/primary/ui/employee-cards.component-module';
 import { EmployeeFormComponentModule } from 'projects/employess/src/lib/adapters/primary/ui/employee-form.component-module';
-import { OurTeamComponentModule } from 'projects/team/src/lib/adapters/primary/ui/our-team.component-module'
+import { OurTeamComponentModule } from 'projects/team/src/lib/adapters/primary/ui/our-team.component-module';
 
 @NgModule({
   imports: [
