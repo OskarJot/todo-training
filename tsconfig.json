@@ -10,6 +10,10 @@
         "dist/employess/employess",
         "dist/employess"
       ],
+      "messages": [
+        "dist/messages/messages",
+        "dist/messages"
+      ],
       "team": [
         "dist/team/team",
         "dist/team"

@@ -23,10 +23,10 @@ import { OurTeamComponentModule } from 'projects/team/src/lib/adapters/primary/u
         path: '',
         component: OmniePage,
       },
-      {
-        path: 'Omnie/:name',
-        component: EmployeeDetailsPage,
-      }
+      // {
+      //   path: 'Omnie/:name',
+      //   component: EmployeeDetailsPage,
+      // }
     ]),
   ],
   declarations: [OmniePage],

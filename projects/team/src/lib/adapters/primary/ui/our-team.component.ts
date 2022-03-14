@@ -14,12 +14,16 @@ import { of } from 'rxjs';
 export class OurTeamComponent {
   dane$ = of([
     {
-      name: 'Employee 1',
-      imageUrl: 'http://localhost:4200/assets/20190908Malbork5489_str1219.jpg',
+      name: 'Jan Frodeno',
+      imageUrl: 'https://akademiatriathlonu.pl/wp-content/uploads/2019/10/Ironman-Kona-PRO-m%C4%99%C5%BCczy%C5%BAni-mini.jpg',
     },
     {
-      name: 'Employee 2',
-      imageUrl: 'https://images.squarespace-cdn.com/content/v1/5dd1dbe652b7125e8bb44cef/1575312535220-GDC9DUG5J53QD026LNZF/2018_0425+TalkSpace_+263_Grey+Headshot.jpg?format=750w',
+      name: 'Mark Allen',
+      imageUrl: 'https://www.triathlon.org/images/news_thumbs/Avignon_1989_-_Mark_Allen_-_credit_ITU.jpg',
+    },
+    {
+      name: 'Jerzy Górski',
+      imageUrl: 'http://ocdn.eu/images/pulscms/ZWY7MDA_/d3d70566e584f7cc91fefd746961cea2.jpeg',
     },
   ]);
 
