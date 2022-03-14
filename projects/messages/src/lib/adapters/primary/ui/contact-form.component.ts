@@ -16,8 +16,9 @@ export class ContactFormComponent {
     text: new FormControl(),
   });
 
-  onFormSubmited(employeeForm: FormGroup) {
-    {console.log(this.messageForm.getRawValue());}
+  onFormSubmited(messageForm: FormGroup) {
+    console.log(messageForm.getRawValue());
+    alert(`email: ${messageForm.value.email}, text: ${messageForm.value.text}`);
 }
 
 }
