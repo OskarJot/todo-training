@@ -18,11 +18,12 @@
         "dist/team/team",
         "dist/team"
       ],
+      "@team": ["projects/team/src/public-api.ts"],
       "navigation": [
         "dist/navigation/navigation",
         "dist/navigation"
       ],
-      "@team": ["projects/team/src/public-api.ts"]
+      
     },
     "declaration": false,
     "downlevelIteration": true,

@@ -4,8 +4,6 @@ import { RouterModule } from '@angular/router';
 import { OmniePage } from './omnie.page';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { EmployeeCardsComponentModule } from 'projects/employess/src/lib/adapters/primary/ui/employee-cards.component-module';
-import { EmployeeFormComponentModule } from 'projects/employess/src/lib/adapters/primary/ui/employee-form.component-module';
 import { OurTeamComponentModule } from 'projects/team/src/lib/adapters/primary/ui/our-team.component-module';
 import { ContactFormComponentModule } from '../../../projects/messages/src/lib/adapters/primary/ui/contact-form.component-module';
 
@@ -13,8 +11,6 @@ import { ContactFormComponentModule } from '../../../projects/messages/src/lib/a
   imports: [
     BsDropdownModule.forRoot(),
     CommonModule,
-    EmployeeCardsComponentModule,
-    EmployeeFormComponentModule,
     OurTeamComponentModule,
     CarouselModule.forRoot(),
     RouterModule.forChild([
