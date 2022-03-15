@@ -7,6 +7,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { EmployeeCardsComponentModule } from 'projects/employess/src/lib/adapters/primary/ui/employee-cards.component-module';
 import { EmployeeFormComponentModule } from 'projects/employess/src/lib/adapters/primary/ui/employee-form.component-module';
 import { OurTeamComponentModule } from 'projects/team/src/lib/adapters/primary/ui/our-team.component-module';
+import { ContactFormComponentModule } from '../../../projects/messages/src/lib/adapters/primary/ui/contact-form.component-module';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import { OurTeamComponentModule } from 'projects/team/src/lib/adapters/primary/u
       //   component: EmployeeDetailsPage,
       // }
     ]),
+    ContactFormComponentModule
   ],
   declarations: [OmniePage],
   providers: [],
