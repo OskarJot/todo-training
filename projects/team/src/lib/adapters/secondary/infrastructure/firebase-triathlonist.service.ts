@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable, PartialObserver } from 'rxjs';
 import { TriathletDTO } from '../../../application/ports/secondary/triathlet.dto';
 import { map } from 'rxjs/operators';
@@ -14,6 +14,6 @@ export class FirebaseTriathlonistService implements GetsAllTriathletDtoPort {
     return this._client
     .collection<TriathletDTO>('employee')
     .valueChanges({ idField: 'id'})
-    .pipe(map(data)) => ilterByCriterion(data, criterion);
+    .pipe(map(data => filterByCriterion(data, criterion)));
   }
 }

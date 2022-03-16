@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FirebaseTriathlonistService } from './firebase-triathlonist.service';
 
 @NgModule({ imports: [AngularFirestoreModule],
