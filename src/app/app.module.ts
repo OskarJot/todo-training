@@ -7,6 +7,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { OurTeamComponentModule } from 'projects/team/src/lib/adapters/primary/ui/our-team.component-module';
 import { NavbarComponentModule } from 'projects/navigation/src/lib/adapters/primary/ui/navbar.component-module';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [
     AppComponent
@@ -19,6 +21,7 @@ import { NavbarComponentModule } from 'projects/navigation/src/lib/adapters/prim
     NavbarComponentModule,
     CarouselModule.forRoot(),
     BsDropdownModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firestoreConfig),
   ],
   providers: [],
   bootstrap: [AppComponent]

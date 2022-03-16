@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "lowgular-core": {
+      "hosting": {
+        "todo-training": [
+          "lowgular-core"
+        ]
+      }
+    }
+  }
+}
