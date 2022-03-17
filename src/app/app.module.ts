@@ -9,6 +9,7 @@ import { OurTeamComponentModule } from 'projects/team/src/lib/adapters/primary/u
 import { NavbarComponentModule } from 'projects/navigation/src/lib/adapters/primary/ui/navbar.component-module';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+import { AdminPageModule } from './pages/admin.page-module';
 @NgModule({
   declarations: [
     AppComponent
@@ -19,6 +20,7 @@ import { environment } from 'src/environments/environment';
     OurTeamComponentModule,
     BrowserAnimationsModule,
     NavbarComponentModule,
+    AdminPageModule,
     CarouselModule.forRoot(),
     BsDropdownModule.forRoot(),
     AngularFireModule.initializeApp(environment.firestoreConfig),
