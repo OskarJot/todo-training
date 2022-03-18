@@ -4,11 +4,12 @@ import { AddsTriathlonistListDtoPort } from '../../../application/ports/secondar
 import { TriathlonistListDTO } from '../../../application/ports/secondary/triathlonist-list.dto';
 
 @Injectable()
-export class FirebaseAddTriathlonistListService implements AddsTriathlonistListDtoPort {
-  constructor(private _client: AngularFirestore) {
-  }
+export class FirebaseAddTriathlonistListService
+  implements AddsTriathlonistListDtoPort
+{
+  constructor(private _client: AngularFirestore) {}
 
   add(triathlonistList: Partial<TriathlonistListDTO>): void {
-    this._client.collection('triathlonist-lists').add(triathlonistList);
+    this._client.collection('triathlonist-list').add(triathlonistList);
   }
 }
