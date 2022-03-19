@@ -1,7 +1,8 @@
-<div>
-  <div class="row">
+<div class="container">
+  <div class="row justify-content-md-center">
     <div
-      class="col"
+      style="background-color: goldenrod; margin: 5px;"
+      class="col; shadow-sm p-3 mb-5 bg-body rounded"
       *ngFor="let employee of dane$ | async"
       (click)="onEmployeeClicked(employee)"
     >
@@ -20,4 +21,4 @@
       </div>
     </div>
   </div>
-</div> 
+</div>
