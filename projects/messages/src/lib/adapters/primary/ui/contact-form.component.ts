@@ -1,9 +1,7 @@
-import {
-  Component,
-  ViewEncapsulation,
-  ChangeDetectionStrategy,
-} from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Component, ViewEncapsulation, ChangeDetectionStrategy, Inject } from '@angular/core';
+import { ADDS_MESSAGE_DTO, AddsMessageDtoPort } from '../../../application/ports/secondary/adds-message.dto-port';
+
 @Component({
   selector: 'lib-contact-form',
   templateUrl: './contact-form.component.html',
@@ -16,9 +14,22 @@ export class ContactFormComponent {
     text: new FormControl(),
   });
 
-  onFormSubmited(messageForm: FormGroup) {
-    console.log(messageForm.getRawValue());
-    alert(`email: ${messageForm.value.email}, text: ${messageForm.value.text}`);
-}
+//   onFormSubmited(messageForm: FormGroup): void {
+//     console.log(messageForm.getRawValue());
+//     alert(`email: ${messageForm.value.email}, text: ${messageForm.value.text}`);
+// }
 
+  constructor(@Inject(ADDS_MESSAGE_DTO) private _addsMessageDto: AddsMessageDtoPort) {
+  }
+
+  onMessageFormAddeventlistenered(messageForm: FormGroup): void {
+    if (messageForm.invalid) {
+      return;
+    }
+    this._addsMessageDto.add({
+      email: messageForm.get('email').value,
+      text: messageForm.get('text').value
+    });
+    this.messageForm.reset();
+  }
 }
