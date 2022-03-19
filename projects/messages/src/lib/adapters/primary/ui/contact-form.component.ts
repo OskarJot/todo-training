@@ -21,8 +21,8 @@ export class ContactFormComponent {
 
   constructor(@Inject(ADDS_MESSAGE_DTO) private _addsMessageDto: AddsMessageDtoPort) {
   }
-
-  onMessageFormAddeventlistenered(messageForm: FormGroup): void {
+  
+  onMessageForm(messageForm: FormGroup): void {
     if (messageForm.invalid) {
       return;
     }
