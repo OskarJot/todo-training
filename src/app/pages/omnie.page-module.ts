@@ -18,10 +18,6 @@ import { ContactFormComponentModule } from '../../../projects/messages/src/lib/a
         path: '',
         component: OmniePage,
       },
-      // {
-      //   path: 'Omnie/:name',
-      //   component: EmployeeDetailsPage,
-      // }
     ]),
     ContactFormComponentModule
   ],

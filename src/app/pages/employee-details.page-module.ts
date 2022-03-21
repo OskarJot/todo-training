@@ -14,7 +14,7 @@ import { TriathletcardComponentModule } from '../../../projects/team/src/lib/ada
     TriathletcardComponentModule,
     RouterModule.forChild([
       {
-        path: '/Omnie/:name',
+        path: '',
         component: EmployeeDetailsPage,
       },
     ]),
