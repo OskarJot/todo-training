@@ -4,6 +4,9 @@ import { RouterModule } from '@angular/router';
 import { KontaktPage } from './kontakt.page';
 import { ContactFormComponentModule } from 'projects/messages/src/lib/adapters/primary/ui/contact-form.component-module';
 import { FirebaseMessageServiceModule } from 'projects/messages/src/lib/adapters/secondary/infrastructure/firebase-message.service-module';
+import { MessageuserComponentModule } from '../../../projects/messages/src/lib/adapters/primary/ui/messageuser.component-module';
+import { FirebaseGetsOneMessageServiceModule } from '../../../projects/messages/src/lib/adapters/secondary/infrastructure/firebase-gets-one-message.service-module';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +18,8 @@ import { FirebaseMessageServiceModule } from 'projects/messages/src/lib/adapters
         component: KontaktPage,
       },
     ]),
+    MessageuserComponentModule,
+    FirebaseGetsOneMessageServiceModule
   ],
   declarations: [KontaktPage],
   providers: [],

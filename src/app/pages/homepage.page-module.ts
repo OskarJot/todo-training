@@ -6,15 +6,21 @@ import { OurTeamComponentModule } from 'projects/team/src/lib/adapters/primary/u
 import { TriathlonistListComponentModule } from '../../../projects/team/src/lib/adapters/primary/ui/triathlonist-list.component-module';
 import { FirebaseTriathlonistListServiceModule } from '../../../projects/team/src/lib/adapters/secondary/infrastructure/firebase-triathlonist-list.service-module';
 
-@NgModule({ imports: [CommonModule, OurTeamComponentModule, TriathlonistListComponentModule,
-      RouterModule.forChild([
-        {
-          path: '',
-          component: HomepagePage,
-        }
-      ]), FirebaseTriathlonistListServiceModule],
-  	declarations: [HomepagePage],
-  	providers: [],
-  	exports: [] })
-export class HomepagePageModule {
-}
+@NgModule({
+  imports: [
+    CommonModule,
+    OurTeamComponentModule,
+    TriathlonistListComponentModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: HomepagePage,
+      },
+    ]),
+    FirebaseTriathlonistListServiceModule,
+  ],
+  declarations: [HomepagePage],
+  providers: [],
+  exports: [],
+})
+export class HomepagePageModule {}

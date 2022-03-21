@@ -1,4 +1,7 @@
-<form [formGroup]="createTriathlonist" (ngSubmit)="onCreateTriathlonistSubmited(createTriathlonist)">
+<form
+  [formGroup]="createTriathlonist"
+  (ngSubmit)="onCreateTriathlonistSubmited(createTriathlonist)"
+>
   <input type="text" formControlName="name" placeholder="Name" /><input
     type="text"
     formControlName="imageUrl"

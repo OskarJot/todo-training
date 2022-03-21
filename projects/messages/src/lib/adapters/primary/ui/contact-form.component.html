@@ -1,9 +1,13 @@
 <br />
 <h1 style="text-align: center">Skontktuj się z nami</h1>
-<form style="text-align: center;" [formGroup]="messageForm" (ngSubmit)="onMessageForm(messageForm)">
+<form
+  style="text-align: center"
+  [formGroup]="messageForm"
+  (ngSubmit)="onMessageForm(messageForm)"
+>
   <input type="text" formControlName="email" placeholder="Email" /><input
     type="text"
     formControlName="text"
     placeholder="Text"
-  /><input type="submit" value="Submit"/>
+  /><input type="submit" value="Submit" />
 </form>

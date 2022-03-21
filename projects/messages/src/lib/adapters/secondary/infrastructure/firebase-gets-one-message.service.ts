@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable()
-export class FirebaseCokolwikekService {
+export class FirebaseGetsOneMessageService {
   constructor(private _client: AngularFirestore) {
   }
 }

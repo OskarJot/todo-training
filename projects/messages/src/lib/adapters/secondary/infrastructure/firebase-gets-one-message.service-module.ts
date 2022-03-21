@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { FirebaseCokolwikekService } from './firebase-cokolwikek.service';
+import { FirebaseGetsOneMessageService } from './firebase-gets-one-message.service';
 
 @NgModule({ imports: [AngularFirestoreModule],
   	declarations: [],
-  	providers: [FirebaseCokolwikekService],
+  	providers: [FirebaseGetsOneMessageService],
   	exports: [] })
-export class FirebaseCokolwikekServiceModule {
+export class FirebaseGetsOneMessageServiceModule {
 }
