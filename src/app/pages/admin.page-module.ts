@@ -13,7 +13,7 @@ import { FirebaseAddTriathlonistListServiceModule } from '../../../projects/team
         }
       ]),
   CreateTriathletComponentModule,
-  FirebaseAddTriathlonistListServiceModule
+  FirebaseAddTriathlonistListServiceModule,
 ],
   	declarations: [AdminPage],
   	providers: [],

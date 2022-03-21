@@ -11,23 +11,20 @@ import { ActivatedRoute } from '@angular/router';
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-
 export class EmployeeDetailsPage {
-
   name;
-  sub : any;
+  sub: any;
 
   constructor(private route: ActivatedRoute) {}
 
   private ngOnInit() {
-    this.sub = this.route.params.subscribe(params => {
+    this.sub = this.route.params.subscribe((params) => {
       this.name = params['name'];
-      console.log(this.name)
+      console.log(this.name);
     });
   }
 
   private ngOnDestroy() {
     this.sub.unsubscribe();
   }
-
 }
