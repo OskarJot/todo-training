@@ -29,7 +29,7 @@ const routes: Routes = [
     loadChildren: () => AdminPageModule,
   },
   {
-    path: 'triathletdetails/:name',
+    path: 'triathletdetails/:triathletId',
     loadChildren: () => EmployeeDetailsPageModule,
   },
 ];

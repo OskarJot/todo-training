@@ -19,9 +19,9 @@ import { ActivatedRoute } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TriathletcardComponent {
-  triathlonistcard$: Observable<TriathlonistListDTO> =
+  trathlonistList$: Observable<TriathlonistListDTO> =
     this._getsOneTriathlonistListDto.getOne(
-        this._activatedRoute.snapshot.params.trathlonistListId
+        this._activatedRoute.snapshot.params.triathletId
     );
 
   constructor(
