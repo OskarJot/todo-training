@@ -1,3 +1,32 @@
-<h1>Triathlet Details</h1>
-{{ (trathlonistList$ | async)?.name }} <br>
-{{ (trathlonistList$ | async)?.id }}
+<!-- <h1 style="text-align: center;">Triathlet Details</h1> -->
+<br />
+<div class="container; shadow p-3 mb-5 bg-body rounded">
+  <div class="row">
+    <div class="col-sm-8">
+      <h3>{{ (trathlonistList$ | async)?.name }}</h3>
+    </div>
+    <div class="col-sm-4">
+      <p><i>id: {{ (trathlonistList$ | async)?.id }}</i></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <img
+        style="height: 350px"
+        src="{{ (trathlonistList$ | async)?.imageUrl }}"
+      />
+    </div>
+    <div class="col-sm"><h5>Bio</h5>{{ (trathlonistList$ | async)?.bio }}</div>
+    <div class="col-sm">
+        <h5>Najlepsze starty</h5>
+        <ul class="list-group">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">A fourth item</li>
+            <li class="list-group-item">And a fifth one</li>
+          </ul>
+    </div>
+  </div>
+</div>
+<br />
