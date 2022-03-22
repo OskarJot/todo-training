@@ -10,6 +10,7 @@ import { NavbarComponentModule } from 'projects/navigation/src/lib/adapters/prim
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AdminPageModule } from './pages/admin.page-module';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent
@@ -21,6 +22,7 @@ import { AdminPageModule } from './pages/admin.page-module';
     BrowserAnimationsModule,
     NavbarComponentModule,
     AdminPageModule,
+    CommonModule,
     CarouselModule.forRoot(),
     BsDropdownModule.forRoot(),
     AngularFireModule.initializeApp(environment.firestoreConfig),
