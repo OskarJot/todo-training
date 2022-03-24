@@ -11,6 +11,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AdminPageModule } from './pages/admin.page-module';
 import { CommonModule } from '@angular/common';
+import { InMemoryContextStorageModule } from 'projects/team/src/lib/adapters/secondary/infrastructure/in-memory-context.storage-module';
 @NgModule({
   declarations: [
     AppComponent
@@ -26,6 +27,7 @@ import { CommonModule } from '@angular/common';
     CarouselModule.forRoot(),
     BsDropdownModule.forRoot(),
     AngularFireModule.initializeApp(environment.firestoreConfig),
+    InMemoryContextStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

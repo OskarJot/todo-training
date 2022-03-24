@@ -10,7 +10,12 @@ import {
   GETS_ONE_TRIATHLONIST_LIST_DTO,
   GetsOneTriathlonistListDtoPort,
 } from '../../../application/ports/secondary/gets-one-triathlonist-list.dto-port';
-import { ActivatedRoute } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
+import {
+  CONTEXT_DTO_STORAGE,
+  ContextDtoStoragePort,
+} from '../../../application/ports/secondary/context-dto.storage-port';
+import { ContextDTO } from '../../../application/ports/secondary/context.dto';
 
 @Component({
   selector: 'lib-triathletcard',
@@ -20,13 +25,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TriathletcardComponent {
   trathlonistList$: Observable<TriathlonistListDTO> =
-    this._getsOneTriathlonistListDto.getOne(
-        this._activatedRoute.snapshot.params.triathletId
-    );
+    this._contextDtoStoragePort
+      .asObservable()
+      .pipe(
+        switchMap((data: ContextDTO) =>
+          this._getsOneTriathlonistListDto.getOne(data.triathletId)
+        )
+      );
 
   constructor(
     @Inject(GETS_ONE_TRIATHLONIST_LIST_DTO)
     private _getsOneTriathlonistListDto: GetsOneTriathlonistListDtoPort,
-    private _activatedRoute: ActivatedRoute
+    @Inject(CONTEXT_DTO_STORAGE)
+    private _contextDtoStoragePort: ContextDtoStoragePort
   ) {}
 }

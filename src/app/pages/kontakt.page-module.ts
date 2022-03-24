@@ -6,6 +6,7 @@ import { ContactFormComponentModule } from 'projects/messages/src/lib/adapters/p
 import { FirebaseMessageServiceModule } from 'projects/messages/src/lib/adapters/secondary/infrastructure/firebase-message.service-module';
 import { MessageuserComponentModule } from '../../../projects/messages/src/lib/adapters/primary/ui/messageuser.component-module';
 import { FirebaseGetsOneMessageServiceModule } from '../../../projects/messages/src/lib/adapters/secondary/infrastructure/firebase-gets-one-message.service-module';
+import { InMemoryContextStorageModule } from 'projects/team/src/lib/adapters/secondary/infrastructure/in-memory-context.storage-module';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { FirebaseGetsOneMessageServiceModule } from '../../../projects/messages/
       },
     ]),
     MessageuserComponentModule,
-    FirebaseGetsOneMessageServiceModule
+    FirebaseGetsOneMessageServiceModule,
+    InMemoryContextStorageModule,
   ],
   declarations: [KontaktPage],
   providers: [],
