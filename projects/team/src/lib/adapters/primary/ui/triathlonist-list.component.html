@@ -6,18 +6,16 @@
       *ngFor="let item of trathlonistList$ | async"
       class="col; card; shadow-sm p-2 mb-2 bg-body rounded; p-1 bg-light border; mx-auto"
       style="width: 20rem"
+      
     >
       <img
         src="{{ item.imageUrl }}"
         class="card-img-top"
         alt="{{ item.imageUrl }}"
+        (click)="onTriathletIdClicked(item)"
       />
       <div class="card-body">
         <h5 class="card-title">{{ item.name }}</h5>
-        <p class="card-text">{{ item.id }}</p>
-        <p class="card-text">
-          {{ item.bio }}
-        </p>
         <a [routerLink]="'/triathletdetails/'+ item.id" (click)="onTriathletIdClicked(item)" class="btn btn-primary">Zobacz stronę</a>
       </div>
     </div>
