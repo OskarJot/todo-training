@@ -6,6 +6,8 @@ import { OurTeamComponentModule } from 'projects/team/src/lib/adapters/primary/u
 import { TriathlonistListComponentModule } from '../../../projects/team/src/lib/adapters/primary/ui/triathlonist-list.component-module';
 import { FirebaseTriathlonistListServiceModule } from '../../../projects/team/src/lib/adapters/secondary/infrastructure/firebase-triathlonist-list.service-module';
 import { TriathletcardComponentModule } from '../../../projects/team/src/lib/adapters/primary/ui/triathletcard.component-module';
+import { TriathletIdResolverModule } from 'projects/team/src/lib/adapters/primary/ui/triathlet-id.resolver-module';
+import { TriathletIdResolver } from 'projects/team/src/lib/adapters/primary/ui/triathlet-id.resolver';
 
 @NgModule({
   imports: [
@@ -16,10 +18,14 @@ import { TriathletcardComponentModule } from '../../../projects/team/src/lib/ada
       {
         path: '',
         component: HomepagePage,
+        resolve: {
+          triathletId: TriathletIdResolver,
+        }
       },
     ]),
     FirebaseTriathlonistListServiceModule,
-    TriathletcardComponentModule
+    TriathletcardComponentModule,
+    TriathletIdResolverModule,
   ],
   declarations: [HomepagePage],
   providers: [],

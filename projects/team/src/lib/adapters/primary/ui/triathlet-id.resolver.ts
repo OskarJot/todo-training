@@ -13,7 +13,7 @@ export class TriathletIdResolver implements Resolve<boolean> {
   }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
-    this._contextDtoStorage.next({triathletId: route.params.item.id});
+    this._contextDtoStorage.next({triathletId: route.params.item});
     return of(true);
   }
 }
