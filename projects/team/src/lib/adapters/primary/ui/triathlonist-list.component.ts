@@ -10,10 +10,6 @@ import {
   GETS_ALL_TRIATHLONIST_LIST_DTO,
   GetsAllTriathlonistListDtoPort,
 } from '../../../application/ports/secondary/gets-all-triathlonist-list.dto-port';
-import {
-  CONTEXT_DTO_STORAGE,
-  ContextDtoStoragePort,
-} from '../../../application/ports/secondary/context-dto.storage-port';
 
 @Component({
   selector: 'lib-triathlonist-list',
@@ -28,11 +24,6 @@ export class TriathlonistListComponent {
   constructor(
     @Inject(GETS_ALL_TRIATHLONIST_LIST_DTO)
     private _getsAllTriathlonistListDto: GetsAllTriathlonistListDtoPort,
-    @Inject(CONTEXT_DTO_STORAGE)
-    private _contextDtoStorage: ContextDtoStoragePort
   ) {}
 
-  onTriathletIdClicked(item: TriathlonistListDTO): void {
-    this._contextDtoStorage.next({triathletId: item.id});
-  }
 }

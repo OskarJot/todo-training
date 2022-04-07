@@ -6,6 +6,8 @@ import { FirebaseTriathlonistListServiceModule } from '../../../projects/team/sr
 import { TriathletcardComponentModule } from '../../../projects/team/src/lib/adapters/primary/ui/triathletcard.component-module';
 import { TriathlonistListComponentModule } from 'projects/team/src/lib/adapters/primary/ui/triathlonist-list.component-module';
 import { CommonModule } from '@angular/common';
+import { TriathletIdResolverModule } from 'projects/team/src/lib/adapters/primary/ui/triathlet-id.resolver-module';
+import { TriathletIdResolver } from 'projects/team/src/lib/adapters/primary/ui/triathlet-id.resolver';
 
 @NgModule({
   imports: [
@@ -15,11 +17,15 @@ import { CommonModule } from '@angular/common';
     TriathletcardComponentModule,
     RouterModule.forChild([
       {
-        path: '',
+        path: ':triathletId',
         component: EmployeeDetailsPage,
+        resolve: {
+          triathletId: TriathletIdResolver,
+        }
       },
     ]),
     FirebaseTriathlonistListServiceModule,
+    TriathletIdResolverModule,
   ],
   declarations: [EmployeeDetailsPage],
   providers: [],
